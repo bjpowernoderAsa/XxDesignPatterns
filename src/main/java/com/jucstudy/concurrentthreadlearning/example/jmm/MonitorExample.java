@@ -1,6 +1,6 @@
-package com.designpatterns.concurrentthreadlearning.example.jmm;
+package com.jucstudy.concurrentthreadlearning.example.jmm;
 
-import com.designpatterns.concurrentthreadlearning.example.utils.ThreadSleepUtil;
+import com.jucstudy.concurrentthreadlearning.example.utils.ThreadSleepUtil;
 
 /**
  * 文件说明：监控器例子

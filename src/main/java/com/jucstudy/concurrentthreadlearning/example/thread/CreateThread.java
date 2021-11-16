@@ -1,4 +1,4 @@
-package com.designpatterns.concurrentthreadlearning.example.thread;
+package com.jucstudy.concurrentthreadlearning.example.thread;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;

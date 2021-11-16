@@ -1,4 +1,4 @@
-package com.designpatterns.ThreadTest;
+package com.jucstudy.ThreadTest;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

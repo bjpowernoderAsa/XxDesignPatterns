@@ -1,4 +1,4 @@
-package com.designpatterns.concurrentthreadlearning.example.lock;
+package com.jucstudy.concurrentthreadlearning.example.lock;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.AbstractQueuedSynchronizer;

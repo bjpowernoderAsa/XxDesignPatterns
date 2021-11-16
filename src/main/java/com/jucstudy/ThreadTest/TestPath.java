@@ -1,4 +1,4 @@
-package com.designpatterns.ThreadTest;
+package com.jucstudy.ThreadTest;
 
 import javax.swing.filechooser.FileSystemView;
 import java.io.File;

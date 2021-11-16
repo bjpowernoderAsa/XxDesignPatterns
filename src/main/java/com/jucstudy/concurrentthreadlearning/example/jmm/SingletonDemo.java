@@ -1,4 +1,4 @@
-package com.designpatterns.concurrentthreadlearning.example.jmm;
+package com.jucstudy.concurrentthreadlearning.example.jmm;
 
 /**
  * 文件说明：并发创建单例

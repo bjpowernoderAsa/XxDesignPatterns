@@ -1,6 +1,6 @@
-package com.designpatterns.concurrentthreadlearning.example.thread;
+package com.jucstudy.concurrentthreadlearning.example.thread;
 
-import com.designpatterns.concurrentthreadlearning.example.utils.ThreadSleepUtil;
+import com.jucstudy.concurrentthreadlearning.example.utils.ThreadSleepUtil;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

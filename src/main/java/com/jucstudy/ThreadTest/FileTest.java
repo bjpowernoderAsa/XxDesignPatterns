@@ -1,8 +1,7 @@
-package com.designpatterns.ThreadTest;
+package com.jucstudy.ThreadTest;
 
 
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 import static java.util.concurrent.Executors.*;
 

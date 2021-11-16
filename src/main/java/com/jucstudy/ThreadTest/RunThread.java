@@ -1,4 +1,4 @@
-package com.designpatterns.ThreadTest;
+package com.jucstudy.ThreadTest;
 
 /**
  * 文件说明：

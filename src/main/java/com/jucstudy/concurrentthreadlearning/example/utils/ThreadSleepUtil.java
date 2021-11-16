@@ -1,4 +1,4 @@
-package com.designpatterns.concurrentthreadlearning.example.utils;
+package com.jucstudy.concurrentthreadlearning.example.utils;
 
 import java.util.concurrent.TimeUnit;
 

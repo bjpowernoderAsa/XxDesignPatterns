@@ -1,4 +1,4 @@
-package com.designpatterns.ThreadTest;
+package com.jucstudy.ThreadTest;
 
 import java.io.*;
 import java.net.HttpURLConnection;
