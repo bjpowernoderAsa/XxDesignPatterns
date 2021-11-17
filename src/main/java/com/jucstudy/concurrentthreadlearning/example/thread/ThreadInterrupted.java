@@ -10,7 +10,7 @@ public class ThreadInterrupted {
     public static void main(String[] args) throws InterruptedException {
         MyThread myThread = new MyThread();
         myThread.start();
-        Thread.sleep(1);
+        Thread.sleep(3);
         myThread.interrupt();  //线程中断
     }
 
