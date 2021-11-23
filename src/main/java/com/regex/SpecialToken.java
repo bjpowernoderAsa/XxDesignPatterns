@@ -10,7 +10,6 @@ package com.regex;
 public enum SpecialToken {
 
     ASTERISK('*',6,true,true),
-//    POINT('.',6,true,true),
     PLUS('+',6,true,true),
     QUESTION('?',6,true,true),
     L_PARENTHESIS('(',9,false,false),
