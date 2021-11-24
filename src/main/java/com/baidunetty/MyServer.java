@@ -55,12 +55,10 @@ public class MyServer {
             try {
                 port = Integer.valueOf(args[0]);
             }catch (Exception e){
-
+                logger.info(e.getMessage());
             }
         }
-
         new MyServer().run(port);
-
     }
 
 }

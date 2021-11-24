@@ -5,6 +5,7 @@ import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
+import java.nio.charset.StandardCharsets;
 import java.util.logging.Logger;
 
 /**
@@ -29,7 +30,7 @@ public class MyClientHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         //与服务端建立连接
-        System.out.println("client channelActive");
+        System.out.println("client channelActive...");
         this.ctx = ctx;
         ctx.writeAndFlush(firstMsg);
     }
@@ -56,7 +57,7 @@ public class MyClientHandler extends ChannelInboundHandlerAdapter {
         ByteBuf byteBuf = (ByteBuf) msg;
         byte[] req = new byte[byteBuf.readableBytes()];
         byteBuf.readBytes(req);
-        String body = new String(req,"UTF-8");
+        String body = new String(req, StandardCharsets.UTF_8);
         System.out.println("Now is : " + body);
     }
 

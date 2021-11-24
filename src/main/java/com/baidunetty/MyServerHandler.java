@@ -4,6 +4,7 @@ import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
+import io.netty.util.ReferenceCountUtil;
 
 import java.util.Date;
 
@@ -22,10 +23,25 @@ public class MyServerHandler extends ChannelInboundHandlerAdapter {
         byte[] bytes = new byte[buf.readableBytes()];
         buf.readBytes(bytes);
         String body = new String(bytes,"UTF-8");
-        System.out.println("this time server receive order: " + body);
+        System.out.println("this accept message, server receive order : " + body);
         String currentTime = new Date(System.currentTimeMillis()).toString();
         ByteBuf resp = Unpooled.copiedBuffer(currentTime.getBytes());
         ctx.write(resp);
+
+//        ctx.write(msg); // (1)
+//        ctx.flush(); // (2)  bound   bind
+
+//        try {
+//            while (buf.isReadable()){
+//                System.out.println((char) buf.readByte());
+//                System.out.flush();
+//            }
+//            System.out.println(buf.toString(io.netty.util.CharsetUtil.US_ASCII));
+//            buf.release();
+//        }catch (Exception e){
+//            buf.release();
+//            ReferenceCountUtil.release(msg);
+//        }
     }
 
     @Override
