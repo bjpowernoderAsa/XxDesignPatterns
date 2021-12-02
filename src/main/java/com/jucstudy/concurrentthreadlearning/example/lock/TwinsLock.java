@@ -9,7 +9,7 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 
 /**
- * 文件说明：
+ * 文件说明：双重锁
  *
  * @author XuBin
  * @createDT 2021/11/10 10:41

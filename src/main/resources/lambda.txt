@@ -1,0 +1,49 @@
+一、lambda表达式
+组成：参数列表、箭头符号(->)和函数体
+具体展现形式：
+
+表达式函数(没有return):表达式会被执行然后返回执行结果。
+语句块表达式(每一条路径都要有return):语句块中的语句会被依次执行，就像方法中的语句一样
+
+---------------------------------------------------------------------------------
+大概能分成三类：
+Intermediate(中间操作，意思就是用完这些方法还可以继续用终端操作)
+map (mapToInt, flatMap 等)、 filter、 distinct、 sorted、 peek、 limit、 skip、 parallel、 sequential、 unordered
+
+Terminal(终端操作)
+forEach、 forEachOrdered、 toArray、 reduce、 collect、 min、 max、 count、 anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 iterator
+
+Short-circuiting(短路)
+anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 limit
+
+---------------------------------------------------------------------------------
+Stream 的特性可以归纳为：
+
+不是数据结构
+它没有内部存储，它只是用操作管道从 source（数据结构、数组、generator function、IO channel）抓取数据。
+它也绝不修改自己所封装的底层数据结构的数据。例如 Stream 的 filter 操作会产生一个不包含被过滤元素的新 Stream，而不是- - 从 source 删除那些元素。
+所有 Stream 的操作必须以 lambda 表达式为参数
+不支持索引访问
+你可以请求第一个元素，但无法请求第二个，第三个，或最后一个。不过请参阅下一项。
+很容易生成数组或者 List
+惰性化
+很多 Stream 操作是向后延迟的，一直到它弄清楚了最后需要多少数据才会开始。
+Intermediate 操作永远是惰性化的。
+并行能力
+当一个 Stream 是并行化的，就不需要再写多线程代码，所有对它的操作会自动并行进行的。
+可以是无限的
+集合有固定大小，Stream 则不必。limit(n) 和 findFirst() 这类的 short-circuiting 操作可以对无限的 Stream 进行运算并很快完成。
+
+---------------------------------------------------------------------------------
+方法引用
+
+   类型	                                    示例	                                代码示例	                   对应的Lambda表达式
+引用静态方法	                    ContainingClass::staticMethodName	            String::valueOf	            (s) -> String.valueOf(s)
+引用某个对象的实例方法	            containingObject::instanceMethodName	        x::toString()	            () -> this.toString()
+引用某个类型的任意对象的实例方法	ContainingType::methodName	                    String::toString	        (s) -> s.toString
+引用构造方法	                    ClassName::new String::new	                    () -> new String()
+
+---------------------------------------------------------------------------------
+
+
+

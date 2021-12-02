@@ -1,4 +1,4 @@
-package com.baidunetty;
+package com.netty.baidunetty;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;

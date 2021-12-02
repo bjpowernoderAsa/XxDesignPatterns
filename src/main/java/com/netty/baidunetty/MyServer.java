@@ -1,4 +1,4 @@
-package com.baidunetty;
+package com.netty.baidunetty;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.*;
