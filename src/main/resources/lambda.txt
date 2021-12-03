@@ -45,5 +45,8 @@ Intermediate 操作永远是惰性化的。
 
 ---------------------------------------------------------------------------------
 
+//collect（Supplier，Accumulate，Combiner）
+Accumulate-累计器
+Combiner - 合路器
 
 

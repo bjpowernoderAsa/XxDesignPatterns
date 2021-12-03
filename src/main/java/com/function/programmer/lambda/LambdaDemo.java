@@ -3,6 +3,9 @@ package com.function.programmer.lambda;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.Random;
+import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -14,7 +17,19 @@ import java.util.stream.Stream;
  */
 public class LambdaDemo {
 
+    static class Util{
+        public static <I,O> Supplier<O> apply(Function<I, O> fn, I tag){
+            return () -> fn.apply(tag);
+        }
+    }
+
     public static void main(String[] args) {
+
+        Random random = new Random();
+        Stream<Integer> stream = Stream.generate(Util.apply(random :: nextInt,100));   //() -> random.next(100)
+
+        stream.limit(99).filter(integer -> integer > 50).sorted().forEach(System.out::println);
+
         List<String> list = Arrays.asList("Java","PHP","C++");
         System.out.println("//------------------------------------jdk 8----------------------------------");
         //jdk 8
@@ -81,11 +96,4 @@ public class LambdaDemo {
         boolean s3=list.stream().allMatch(c -> c.equals("xxxx"));
 
     }
-
-
-
-
-
-
-
 }
